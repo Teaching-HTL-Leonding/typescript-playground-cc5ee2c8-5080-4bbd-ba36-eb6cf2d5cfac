@@ -1,22 +1,30 @@
-function setup() {
-    createCanvas (800, 800)
-    background("lightgrey")
+    function setup() {
+    createCanvas(800, 800)
+    background("skyblue")
     
-    
-    fill("dimgray")
-    rect(200. 300, 300, 300)
-
-    fill("white)")
-    rect(250, 450 200, 50)
+    circle(400, 400, 600)
+   
+    fill("black")
+    circle (500, 375, 100)
     
     fill("black")
-    circle(250,375,50 )
+    circle (300, 375, 100)
+    
+    
+
+    fill("lightgray");
+    stroke("black");
+    triangle(250, 200, 350, 50, 400, 200)
+    triangle(400, 200, 450, 50, 550, 200)
 
     
-    fill("black")
-    circle(450,375,50 )
+    line(450, )
 
-    line(350, 300, 350, 200)
-    fill("white")
-    circle(350, 200, 50)
-}
+
+
+    line(450, 470, 600, 450)
+    line(450, 490, 600, 500)
+    line(450, 510, 600, 550)
+
+    }
+
