@@ -1,0 +1,31 @@
+const SCALE = 5;
+ 
+const MARGIN = 4;
+const SOCCERFIELDWIDTH = 70;
+const SOCCERFIELDLENGTH = 100;
+ 
+function setup() {
+   
+    createCanvas((SOCCERFIELDLENGTH + MARGIN * 2) * SCALE, (SOCCERFIELDWIDTH + MARGIN * 2) * SCALE);
+    background("green");
+ 
+    strokeWeight(0.5);
+    stroke("white");
+    noFill();
+    angleMode(DEGREES);
+ 
+    push();
+ 
+    scale(SCALE);
+ 
+   
+    translate(MARGIN, MARGIN);
+    rect(0,0, SOCCERFIELDLENGTH, SOCCERFIELDWIDTH);
+
+    const SOCCERMIDDLELINE= SOCCERFIELDWIDTH / 2
+    const LENGTHGOALAREA = 5.5 * 2+ 7.32
+    const WIDTHGOALAREA = 5.5
+
+    rect(0,SOCCERMIDDLELINE-LENGTHGOALAREA/2,WIDTHGOALAREA,LENGTHGOALAREA)
+   
+}
