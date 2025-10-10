@@ -4,7 +4,13 @@ function setup() {
   createCanvas(1000, 1000)
   background("lightgrey")
 
-
+angleMode(DEGREES)
+  noFill()
+  stroke("green")
+  strokeWeight(20)
+  arc(450,725, 800,500, -21,15)
+  
+  
   fill("lightgreen")
   circle(750, 600, 80)
 
@@ -20,14 +26,6 @@ function setup() {
   fill("yellow")
   noStroke()
   circle(750, 550, 65)
-  
-  
-  angleMode(DEGREES)
-  noFill()
-  stroke("green")
-  strokeWeight(20)
-  arc(500,575, 800,500, -20,45)
-  
 
 
 
