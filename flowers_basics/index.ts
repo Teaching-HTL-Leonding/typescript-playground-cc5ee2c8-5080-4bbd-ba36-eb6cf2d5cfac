@@ -1,5 +1,3 @@
-// <<< ADD CONSTANTS HERE (if you need them)
-
 function setup() {
   createCanvas(1000, 1000)
   background("lightgrey")
@@ -34,7 +32,7 @@ function setup() {
   noFill()
   stroke("green")
   strokeWeight(20)
-  arc(210, 725, 800, 500, -21, 15)
+  arc(205, 725, 800, 500, -21, 15)
 
   strokeWeight(1)
   fill("lightgreen")
