@@ -1,3 +1,5 @@
+const STROKER= 20
+
 function setup() {
   createCanvas(1000, 1000)
   background("lightgrey")
@@ -8,7 +10,7 @@ function setup() {
   strokeWeight(20)
   arc(450, 725, 800, 500, -21, 15)
 
-  strokeWeight(1)
+  strokeWeight(STROKER/20)
   fill("lightgreen")
   circle(750, 600, 80)
 
@@ -31,7 +33,7 @@ function setup() {
   angleMode(DEGREES)
   noFill()
   stroke("green")
-  strokeWeight(20)
+  strokeWeight(STROKER)
   arc(205, 725, 800, 500, -21, 15)
 
   strokeWeight(1)
@@ -39,22 +41,17 @@ function setup() {
   circle(550, 550, 70)
 
   fill("lightgreen")
-  circle(515.5, 597.5,70)
+  circle(515.5, 597.5, 70)
 
   fill("lightgreen")
-  circle(456,581.9, 70)
+  circle(456, 581.9, 70)
 
   fill("lightgreen")
-  circle(515.5,502.5,70)
+  circle(515.5, 502.5, 70)
 
   fill("lightgreen")
   circle(456, 518.1, 70)
 
   fill("yellow")
-  circle(500,550, 65)
-
-
-
-
-  // <<< ADD YOUR CODE HERE
+  circle(500, 550, 65)
 }
