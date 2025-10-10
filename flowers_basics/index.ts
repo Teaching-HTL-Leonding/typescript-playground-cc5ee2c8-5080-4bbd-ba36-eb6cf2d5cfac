@@ -29,7 +29,14 @@ function setup() {
 
 
   //zweite Blume
-  
+
+  angleMode(DEGREES)
+  noFill()
+  stroke("green")
+  strokeWeight(20)
+  arc(210, 725, 800, 500, -21, 15)
+
+  strokeWeight(1)
   fill("lightgreen")
   circle(550, 550, 70)
 
@@ -47,7 +54,7 @@ function setup() {
 
   fill("yellow")
   circle(500,550, 65)
-  
+
 
 
 
