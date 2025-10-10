@@ -18,11 +18,16 @@ function setup() {
   circle(800, 550, 80)
 
   fill("yellow")
-  noStroke(circle)
+  noStroke()
   circle(750, 550, 65)
   
-
-  arc()
+  
+  angleMode(DEGREES)
+  noFill()
+  stroke("green")
+  strokeWeight(20)
+  arc(500,575, 800,500, -20,45)
+  
 
 
 
