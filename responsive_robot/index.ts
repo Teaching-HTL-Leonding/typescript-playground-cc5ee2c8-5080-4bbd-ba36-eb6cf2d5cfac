@@ -17,13 +17,24 @@ function setup() {
   circle(headWidth, 40, 20)
 
   // Left Eye 
-  const leftEyeCenterX= headX + headWidth*0.25
-  const leftEyeCenterY= headY + headHeight*0.25
-  const leftEyeDiameter= min(headWidth,headHeight)* 0.2
+  const leftEyeCenterX = headX + headWidth * 0.25
+  const leftEyeCenterY = headY + headHeight * 0.25
+  const leftEyeDiameter = min(headWidth, headHeight) * 0.2
   fill("black")
   circle(leftEyeCenterX, leftEyeCenterY, leftEyeDiameter)
 
-  const rightEyeCenterX = headX+ headWidth*0.55
-  const rightEyeCenterX = headY+ headHeight*0.25
+  //Right Eye
+  const rightEyeCenterX = headX + headWidth * 0.75
+  const rightEyeCenterY = headY + headHeight * 0.25
+  const rightEyeDiameter = min(headWidth, headHeight) * 0.2
+  fill("black")
+  circle(rightEyeCenterX, rightEyeCenterY, rightEyeDiameter)
+
+  //Mouth
+  const MouthY = headY + headHeight*0.7
+  const MouthWidth = headWidth*0.5
+  const Mouthheight = headHeight*0.1 
+  fill("white")
+  rect(leftEyeCenterX, MouthY, MouthWidth,Mouthheight)
 
 }
