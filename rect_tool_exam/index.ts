@@ -4,15 +4,13 @@ function setup() {
     angleMode(DEGREES);
 }
 
-function mouseMoved() {
+funtcion mouseMoved(){
     background("black")
     stroke('white')
     noFill()
-
-    let w = (mouseX-width/2)* 2
-    let h = (mouseY-height/2)* 2
-
-    rect(width/2, height/2, w, h,)
+    
+    let w= (mouseX-width/2) *2
+    let h= (mouseY-height/2)*2
+    
+    rect(width / 2, height / 2,w,h)
 }
-
-
