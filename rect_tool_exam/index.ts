@@ -16,8 +16,8 @@ function mouseMoved() {
 
     stroke("lightgrey")
     strokeWeight(1)
-    line(width / 2 - w / 2, height / 2, width / 2 + w / 2, height / 2);
-    line(width / 2, height / 2 - h / 2, width / 2, height / 2 + h / 2);
+    line(mouseX, mouseY, mouseX - w, mouseY - h)
+    line(mouseX, mouseY-h, mouseX-w, mouseY)
 
     noStroke();
     fill("lightgray");
@@ -26,6 +26,6 @@ function mouseMoved() {
     text(`${h}`, width / 2, height / 2 - h / 2 - 5);
 
     textAlign(LEFT)
-    const area =Math.round (w * h)
+    const area = Math.round(w * h)
     text(`Area: ${area}`, 5, height - 10)
 }
