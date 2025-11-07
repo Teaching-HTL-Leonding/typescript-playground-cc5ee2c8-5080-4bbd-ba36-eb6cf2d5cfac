@@ -12,7 +12,7 @@ function mouseMoved() {
     let w = (mouseX-width/2)* 2
     let h = (mouseY-height/2)* 2
 
-    
+    rect(width/2, height/2, w, h,)
 }
 
-// <<< Add the function `mouseMoved` with the required code here
+
