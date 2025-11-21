@@ -1,57 +1,54 @@
 function setup() {
-  createCanvas(400, 200);
-  background("black");
-  noStroke();
+  createCanvas(400, 200)
+  background("black")
+  noStroke()
 
-  // Vier Quadranten
-  fill("orange");
-  rect(0, 0, width/2, height/2);
+  fill("orange")
+  rect(0, 0, width/2, height/2)
 
-  fill("green");
-  rect(width/2, 0, width/2, height/2);
+  fill("green")
+  rect(width/2, 0, width/2, height/2)
 
-  fill("blue");
-  rect(0, height/2, width/2, height/2);
+  fill("blue")
+  rect(0, height/2, width/2, height/2)
 
-  fill("red");
-  rect(width/2, height/2, width/2, height/2);
+  fill("red")
+  rect(width/2, height/2, width/2, height/2)
 }
 
-// <<< Add your code here
 function moveClicked() {
-  // Schwarzer Balken in der Mitte
-  const textAreaHeight = 50;
-  const textAreaWidth  = 200;
+  const textAreaHeight = 50
+  const textAreaWidth  = 200
 
-  // Bereich leeren
   fill("black");
   rect(width/2 - textAreaWidth/2, height/2 - textAreaHeight/2,
-       textAreaWidth, textAreaHeight);
+       textAreaWidth, textAreaHeight)
 
-  noStroke();
+  noStroke()
   fill("white")
   textSize(30)
   textStyle(BOLD)
   textAlign(CENTER, CENTER)
 
-  let message: string
+  let message: string;
 
   if (mouseX < width/2) {
     // linke Hälfte
     if (mouseY < height/2) {
-      message = "Orange"
+      message = "Orange";
     } else {
-      message = "Blue"
+      message = "Blue";
     }
   } else {
+    // rechte Hälfte
     if (mouseY < height/2) {
-      message = "Green"
+      message = "Green";
     } else {
-      message = "Red"
+      message = "Red";
     }
   }
 
-  text(message, width/2, height/2);
+  text(message, width/2, height/2)
 }
 
 function mouseClicked() {
