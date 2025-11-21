@@ -32,5 +32,17 @@ function setup() {
     circle(x1, y3, dicePointDiameter);
     circle(x3, y3, dicePointDiameter);
   } else if (dice === 5) {
-    circle()
+    circle(x1, y1, dicePointDiameter);
+    circle(x3, y1, dicePointDiameter);
+    circle(x1, y3, dicePointDiameter);
+    circle(x3, y3, dicePointDiameter);
+    circle(x2, y2, dicePointDiameter);
+  } else if (dice === 6) {
+    circle(x1, y1, dicePointDiameter);
+    circle(x1, y2, dicePointDiameter);
+    circle(x1, y3, dicePointDiameter);
+    circle(x3, y1, dicePointDiameter);
+    circle(x3, y2, dicePointDiameter);
+    circle(x3, y3, dicePointDiameter);
   }
+}
