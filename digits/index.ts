@@ -25,7 +25,7 @@ function setup() {
     fill("yellow");
     noStroke();
 
-    text(, width / 2, height - 20);
+    text(num, width / 2, height - 20);
 
     textSize(30);
 
