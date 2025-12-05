@@ -1,8 +1,8 @@
 let x = 150
 let y = 50
 let size = 50
-let dx = 2
-let dy = 2
+let directionx = 2
+let directiony = 2
 let countdown = 10
 
 function setup() {
@@ -26,24 +26,27 @@ function draw() {
     text(countdown, x, y)
 
     let hit = false
-    
+
     if (countdown > 0) {
-        x += dx
-        y += dy
+        x += directionx
+        y += directiony
     }
 
-    if (x + size >= width|| x - size <= 0) {
-        dx *= -1
+    if (x + size >= width) {
+        directionx *= -1
         countdown -= 1
     }
-    if(y+size>= height || y-size<= 0) {
-        dy*= -1
+    if (x - size <= 0) {
+        directionx *= -1
         countdown -= 1
-    
     }
-
-
-
-
+    if (y + size >= height) {
+        directiony *= -1
+        countdown -= 1
+    }
+    if (y - size <= 0) {
+        directiony *= -1
+        countdown -= 1
+    }
 
 }
