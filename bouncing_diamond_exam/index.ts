@@ -18,26 +18,27 @@ function draw() {
     line(x, y + size, x - size, y)
     line(x - size, y, x, y - size)
     stroke("white")
+    strokeWeight(5)
 
     fill("black")
     textAlign(CENTER, CENTER)
     textSize(20)
     text(countdown, x, y)
 
-
+    let hit = false
+    
     if (countdown > 0) {
         x += dx
         y += dy
     }
 
-
-    let hit = false
-
-    if (x + size >= 0 || x - size < 0) {
+    if (x + size >= width|| x - size <= 0) {
         dx *= -1
-        
     }
-
+    if(y+size>= height || y-size<= 0) {
+        dy*= -1
+        
+    }   
 
 
 
