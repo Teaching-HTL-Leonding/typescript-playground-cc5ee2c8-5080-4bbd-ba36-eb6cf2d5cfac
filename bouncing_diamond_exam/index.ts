@@ -34,11 +34,14 @@ function draw() {
 
     if (x + size >= width|| x - size <= 0) {
         dx *= -1
+        countdown -= 1
     }
     if(y+size>= height || y-size<= 0) {
         dy*= -1
+        countdown -= 1
+    
     }
-    if()
+
 
 
 
