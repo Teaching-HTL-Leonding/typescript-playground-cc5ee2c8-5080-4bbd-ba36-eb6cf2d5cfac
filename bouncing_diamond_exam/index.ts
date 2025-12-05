@@ -42,10 +42,12 @@ function draw() {
     }
     if (y + size >= height) {
         directiony *= -1
+        if(countdown>0)
         countdown -= 1
     }
     if (y - size <= 0) {
         directiony *= -1
+        if(countdown>0)
         countdown -= 1
     }
 
