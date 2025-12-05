@@ -37,8 +37,8 @@ function draw() {
     }
     if(y+size>= height || y-size<= 0) {
         dy*= -1
-        
-    }   
+    }
+    if()
 
 
 
