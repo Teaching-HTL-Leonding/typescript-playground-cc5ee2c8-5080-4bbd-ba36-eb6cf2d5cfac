@@ -7,9 +7,8 @@ function setup() {
 
     noStroke();
 
-    let i= 0
-    while(i < 8) {
-        
+     let i = 0;
+    while (i * STRIPE_THICKNESS <= SIZE) {
+        if (i % 2 === 0)
     }
-
 }
