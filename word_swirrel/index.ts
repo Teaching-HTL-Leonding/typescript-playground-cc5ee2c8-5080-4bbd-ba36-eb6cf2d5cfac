@@ -23,6 +23,7 @@ function setup() {
   text(scrambledWord, WIDTH / 2, HEIGHT / 2);
 }
 
+
 function guess(textInput: string) {
   fill("white");
 
@@ -33,6 +34,7 @@ function guess(textInput: string) {
   } else {
     background("red");
     textSize(50);
-    text(`Wrong!\nIt was "${wordToGuess}"`, WIDTH / 2, HEIGHT / 2);
+    text(`Wrong!\nIt was "${wordToGuess}"`, WIDTH / 2, HEIGHT / 2)
+
   }
 }
