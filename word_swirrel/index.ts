@@ -1,9 +1,5 @@
 const WIDTH = 500;
 const HEIGHT = 300;
-
-// Enter the word to guess here.
-//                   vvv
-//                   vvv
 const wordToGuess = "apple";
 
 function setup() {
