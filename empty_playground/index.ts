@@ -1,23 +1,32 @@
+let rotation: number[] = []
+let centerX: number[] = []
+let centerY: number[] = []
+
 function setup() {
-    const centerX: number[] = [100, 150, 200, 250, 300]
-    const centerY: number[] = [100, 150, 200, 250, 250]
-    const diameter: number[] = [20, 40, 60, 80, 100]
-    
-    console.log("vor push", diameter)
-    centerX.push(400)
-    centerY.push(300)
-    diameter.push(120)
-    console.log("nach push", diameter)
-    
-    centerX.splice(0, 1)
-    centerY.splice(0, 1)
-    diameter.splice( 0, 1)
+    createCanvas(1000, 1000)
+    stroke("black")
+    strokeWeight(2)
+    noFill()
+    angleMode(DEGREES)
+}
 
-    createCanvas(500, 500)
-    background("white")
 
-    fill("red")
+function draw() {
+    background(255, 255, 255, 40)
+
     for (let i = 0; i < centerX.length; i++) {
-        circle(centerX[i], centerY[i], diameter[i])
+        push()
+        translate(centerX[i], centerY[i])
+        rotate(rotation[i])
+        line(-50, 0, 50, 0)
+        pop()
+        rotation[i] += 5
     }
+
+}
+
+function mouseClicked() {
+    centerX.push (mouseX)
+    centerY.push (mouseY)
+    rotation.push(0)
 }
