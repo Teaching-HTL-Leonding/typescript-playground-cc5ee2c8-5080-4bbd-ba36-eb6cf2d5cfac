@@ -1,6 +1,6 @@
-let circleX: number[] = []
-let circleY: number[] = [];
-let direction: number[] = [];
+const circleX: number[] = []
+const circleY: number[] = [];
+const direction: number[] = [];
 
 const SPEED: number = 2;
 const RADI: number = 10;
@@ -30,12 +30,16 @@ function draw() {
             circleX[i] = Math.max(RADI, Math.min(width - RADI, circleX[i]));
         }
     }
+
+    const indicatorY = Math.max(RADI, Math.min(height - RADI, mouseY))
+    circle(RADI, indicatorY, DIAM)
 }
 
+
 function mouseClicked() {
-    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height ) return
-    
+    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height) return
+
     circleX.push(RADI)
-    circleY.push(random(RADI, height - RADI))
+    circleY.push(Math.max(RADI, Math.min(height - RADI, mouseY)))
     direction.push(1)
 }
