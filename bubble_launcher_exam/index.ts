@@ -33,7 +33,7 @@ function draw() {
 }
 
 function mouseClicked() {
-    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height ) 
+    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height ) return
     
     circleX.push(RADI)
     circleY.push(random(RADI, height - RADI))
