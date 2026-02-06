@@ -60,5 +60,5 @@ function draw() {
 }
 
 function mouseClicked {
-    
+    if (mouseY )
 }
