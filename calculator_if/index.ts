@@ -59,6 +59,63 @@ function draw() {
 
 }
 
-function mouseClicked {
-    if (mouseY )
+function mouseClicked() {
+    if (mouseY > lineHeight && mouseY <= height && mouseX >= 0 && mouseX <= width) {
+        const clickedY = Math.floor((mouseY - lineHeight) / lineHeight);
+        const clickedX = Math.floor(mouseX / cellWidth);
+
+        let digit: number = -1;
+
+        switch (clickedY) {
+
+            case 0:
+                switch (clickedX) {
+                    case 0: digit = 7; break;
+                    case 1: digit = 8; break;
+                    case 2: digit = 9; break;
+                    default: digit = -1;
+                }
+                break;
+
+            case 1:
+                switch (clickedX) {
+                    case 0: digit = 4; break;
+                    case 1: digit = 5; break;
+                    case 2: digit = 6; break;
+                    default: digit = -1;
+                }
+                break;
+
+            case 2:
+                switch (clickedX) {
+                    case 0: digit = 1; break;
+                    case 1: digit = 2; break;
+                    case 2: digit = 3; break;
+                    default: digit = -1;
+                }
+                break;
+
+            case 3:
+                switch (clickedX) {
+                    case 0:
+                    case 1: digit = 0; break;
+                    case 2: digit = -1; break;
+                    default: digit = -1;
+                }
+                break;
+
+            default:
+                digit = -1;
+        }
+
+        if (digit === -1) {
+            num = 0;
+        } else {
+            const oldNum = num;
+            num = num * 10 + digit;
+            if (num >= 1000000000) {
+                num = oldNum;
+            }
+        }
+    }
 }
