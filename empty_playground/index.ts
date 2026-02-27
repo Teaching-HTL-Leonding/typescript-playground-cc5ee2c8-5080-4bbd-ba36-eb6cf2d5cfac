@@ -1,21 +1,41 @@
+let nextFlower = true;
+
 function setup() {
-    createCanvas(500, 500)
-    background("black")
-
-    stroke("yellow")
-    strokeWeight(3)
-    fill("aqua")
-
-    for (let i = 0; i < 3; i++) {
-        drawCircle(75, true)
-        translate(100, 0)
-    }
+  createCanvas(500, 500);
+  angleMode(DEGREES);
+  flower(nextFlower);
 }
 
-function drawCircle(diameter: number, hasLines: boolean) {
-    circle(150, 150, diameter)
-    if (hasLines) {
-        line(150, 100, 150, 200)
-        line(100, 150, 200, 150)
-    }
+function mouseClicked() {
+  nextFlower = !nextFlower;
+  flower(nextFlower);
+}
+
+function flower(style: boolean) {
+  push();
+  translate(random(0, width), random(0, height));
+  scale(0.5);
+
+  stroke("black");
+  strokeWeight(4);
+
+  let colorNumber = floor(random(3));
+
+  if (colorNumber === 0) {
+    fill("red");
+  } else if (colorNumber === 1) {
+    fill("green");
+  } else if (colorNumber === 2) {
+    fill("blue");
+  }
+
+  circle(200, 100, 150);
+  circle(300, 200, 150);
+  circle(200, 300, 150);
+  circle(100, 200, 150);
+
+  fill("yellow");
+  circle(200, 200, 150);
+
+  pop();
 }
