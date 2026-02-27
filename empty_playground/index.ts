@@ -1,17 +1,17 @@
-let nextFlower = true;
+let colorIndex = 0;
 
 function setup() {
   createCanvas(500, 500);
   angleMode(DEGREES);
-  flower(nextFlower);
+  flower(colorIndex);
 }
 
 function mouseClicked() {
-  nextFlower = !nextFlower;
-  flower(nextFlower);
+  colorIndex = (colorIndex + 1) % 3; 
+  flower(colorIndex);
 }
 
-function flower(style: boolean) {
+function flower(color) {
   push();
   translate(random(0, width), random(0, height));
   scale(0.5);
@@ -19,13 +19,11 @@ function flower(style: boolean) {
   stroke("black");
   strokeWeight(4);
 
-  let colorNumber = floor(random(3));
-
-  if (colorNumber === 0) {
+  if (color === 0) {
     fill("red");
-  } else if (colorNumber === 1) {
+  } else if (color === 1) {
     fill("green");
-  } else if (colorNumber === 2) {
+  } else if (color === 2) {
     fill("blue");
   }
 
