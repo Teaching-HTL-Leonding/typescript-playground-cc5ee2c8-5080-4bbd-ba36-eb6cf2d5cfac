@@ -11,7 +11,7 @@ function mouseClicked() {
   flower(colorIndex);
 }
 
-function flower(color) {
+function flower(color: number) {
   push();
   translate(random(0, width), random(0, height));
   scale(0.5);
