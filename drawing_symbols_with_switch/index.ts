@@ -60,6 +60,11 @@ function setup() {
       text("❤️", centerX, centerY)
       break
 
-
+    case 6:
+      fill("white")
+      textAlign(CENTER, CENTER)
+      textSize(size)
+      text("🍀", centerX, centerY)
+      break
   }
 }
