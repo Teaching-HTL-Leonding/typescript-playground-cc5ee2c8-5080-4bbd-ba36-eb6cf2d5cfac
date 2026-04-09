@@ -1,39 +1,31 @@
-let colorIndex = 0;
-
 function setup() {
-  createCanvas(500, 500);
-  angleMode(DEGREES);
-  flower(colorIndex);
+    createCanvas(300, 300)
+    background("black")
+
+    noFill()
+    stroke("yellow")
+    translate(10, 10)
+    drawPattern()
+      
 }
 
-function mouseClicked() {
-  colorIndex = (colorIndex + 1) % 3; 
-  flower(colorIndex);
+function drawPattern() {
+    for(let x = 0; x < 15; x++) {    
+    drawColumn(x * 20)
+    }
+
 }
 
-function flower(color: number) {
-  push();
-  translate(random(0, width), random(0, height));
-  scale(0.5);
+function drawColumn(xCoord: number) {
+     for(let y= 0; y < 15; y++) {
+         drawCircle(xCoord, y * 20)
+    }
+}
 
-  stroke("black");
-  strokeWeight(4);
 
-  if (color === 0) {
-    fill("red");
-  } else if (color === 1) {
-    fill("green");
-  } else if (color === 2) {
-    fill("blue");
-  }
+function drawCircle(xCoord: number, yCoord: number) {
+    circle(xCoord, yCoord, 20)
+    line(xCoord - 5, yCoord, xCoord+ 5, yCoord)
+    line(xCoord , yCoord - 5, xCoord, yCoord + 5)
 
-  circle(200, 100, 150);
-  circle(300, 200, 150);
-  circle(200, 300, 150);
-  circle(100, 200, 150);
-
-  fill("yellow");
-  circle(200, 200, 150);
-
-  pop();
 }
