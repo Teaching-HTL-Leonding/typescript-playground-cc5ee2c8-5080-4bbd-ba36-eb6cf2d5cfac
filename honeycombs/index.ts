@@ -21,23 +21,31 @@ function setup() {
     //
   
 
-    for(x = 0; x < 5; x++) {
-        for(y = 0; y < 5; y++) {
+     for (let x = 0; x < 5; x++) {
+        for(let y = 0; y < 5; y++) {
             drawHexagon(x, y)
+            translate(15, 0)
+            
         }
+    drawHexagon(x, y)
     }
+
     // Each line() call: line(x1, y1, x2, y2)
 
 }
 
-  function drawHexagon(xCoord: number, yCoord: number) {
+  function drawHexagon(x: number, y: number) {
         line(20, 0, 45, 0)
         line(45, 0, 65, 25)
         line(65, 25, 45, 50)
         line(45, 50, 20, 50)
         line(20, 50, 0, 25)
-        line(0, 25, 20, 0)
+        line(0, 25, 20, 0) 
+      
     }
+
+
+
 
 function drawHoneycomb() {
     // <<< ADD YOUR CODE HERE >>>
