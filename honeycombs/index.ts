@@ -22,8 +22,13 @@ function setup() {
   for (let x = 0; x < 5; x++) {
         drawHexagon(x, y)
         translate(90, 0)
-             }
+    }
+ for (let y = 0; y < 4; y++) {
+        drawHexagon(y, x)
+        translate(90, 0)
+    }
 }
+
 
      
 
