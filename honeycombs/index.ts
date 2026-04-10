@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(450, 370);   // create a 450×370 px drawing surface
+    createCanvas(1450, 370);   // create a 450×370 px drawing surface
     background("black");      // fill the canvas with black
     stroke("yellow");         // all future lines will be yellow
     // (no fill() call → shapes are outlines only)
@@ -24,9 +24,8 @@ function setup() {
         translate(90, 0)
     }
  for (let y = 0; y < 4; y++) {
-        drawHexagon(x / 2, y)
-        translate(90, y)
-        
+        drawHexagon(0, y *  )
+        translate(-135, 25)
     }
 }
 
