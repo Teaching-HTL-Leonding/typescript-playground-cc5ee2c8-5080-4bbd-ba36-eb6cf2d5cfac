@@ -28,8 +28,10 @@ function setup() {
         line(0, 25, 20, 0)
  }
     
-    let(x = 0; x < 5; x++)
-    drawHexagon() // Each line() call: line(x1, y1, x2, y2)
+    let(x = 0; x < 5; x++) {
+        drawHexagon()
+    }
+     // Each line() call: line(x1, y1, x2, y2)
 
 }
 
