@@ -19,16 +19,13 @@ function setup() {
     //         \                      /
     //          (20,50) ──────── (45,50)
     //
-  
+  for (let x = 0; x < 5; x++) {
+        drawHexagon(x, y)
+        translate(15, 0)
+             }
+}
 
-     for (let x = 0; x < 5; x++) {
-        for(let y = 0; y < 5; y++) {
-            drawHexagon(x, y)
-            translate(15, 0)
-            
-        }
-    drawHexagon(x, y)
-    }
+     
 
     // Each line() call: line(x1, y1, x2, y2)
 
@@ -41,7 +38,7 @@ function setup() {
         line(45, 50, 20, 50)
         line(20, 50, 0, 25)
         line(0, 25, 20, 0) 
-      
+
     }
 
 
