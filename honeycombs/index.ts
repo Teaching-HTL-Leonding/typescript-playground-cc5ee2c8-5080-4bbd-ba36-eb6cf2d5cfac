@@ -21,7 +21,7 @@ function setup() {
     //
   for (let x = 0; x < 5; x++) {
         drawHexagon(x, y)
-        translate(15, 0)
+        translate(90, 0)
              }
 }
 
@@ -29,7 +29,7 @@ function setup() {
 
     // Each line() call: line(x1, y1, x2, y2)
 
-}
+
 
   function drawHexagon(x: number, y: number) {
         line(20, 0, 45, 0)
